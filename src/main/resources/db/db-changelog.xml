@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xmlns:pro="http://www.liquibase.org/xml/ns/pro"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+        http://www.liquibase.org/xml/ns/pro
+        http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.8.xsd">
+
+    <changeSet id="Create Student table" author="nitin">
+        <createTable tableName="STUDENT">
+            <column name="STUDENT_ID" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_STUD_ID" />
+            </column>
+            <column name="STUDENT_FNAME" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="STUDENT_LNAME" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="List of Default Students" author="nitin">
+        <insert tableName="STUDENT">
+            <column name="STUDENT_FNAME" value="Harry" />
+            <column name="STUDENT_LNAME" value="Potter" />
+        </insert>
+        <insert tableName="STUDENT">
+            <column name="STUDENT_FNAME" value="Ron" />
+            <column name="STUDENT_LNAME" value="Weasley" />
+        </insert>
+        <insert tableName="STUDENT">
+            <column name="STUDENT_FNAME" value="Hermione" />
+            <column name="STUDENT_LNAME" value="Granger" />
+        </insert>
+    </changeSet>
+
+    <changeSet id="Create Student profiles table" author="nitin">
+        <createTable tableName="PROFILES">
+            <column name="PRO_ID" type="int" autoIncrement="true">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_PROFILES" />
+            </column>
+            <column name="PRO_STUD_ID" type="int" />
+            <column name="WAND" type="varchar(100)">
+                <constraints nullable="false" />
+            </column>
+            <column name="HOUSE" type="varchar(100)" />
+            <column name="PRO_DESCRIPTION" type="varchar(4000)" />
+            <column name="PRO_IMAGE_URL" type="varchar(100)" />
+        </createTable>
+    </changeSet>
+
+    <changeSet id="Create IX_PRO_STUD_ID" author="nitin">
+        <createIndex tableName="PROFILES" indexName="IX_PRO_STUD_ID">
+            <column name="PRO_STUD_ID" />
+        </createIndex>
+    </changeSet>
+
+    <changeSet id="Create FK_PRO_STUD_ID" author="nitin">
+        <addForeignKeyConstraint baseTableName="PROFILES" baseColumnNames="PRO_STUD_ID" constraintName="FK_PRO_STUD_ID"
+                                 referencedTableName="STUDENT" referencedColumnNames="STUDENT_ID" />
+    </changeSet>
+
+</databaseChangeLog>
