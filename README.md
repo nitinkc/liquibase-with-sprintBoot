@@ -24,5 +24,15 @@ FLUSH PRIVILEGES;
 ```
 
 ### Scenario 2 : 
+Automate the Liquibase execution at Application boot time.
 
-Implement REST API, and have a new column, gender, added in the profiles table.
+Implement REST API, allow MySQL and H2 Db connection, Controlled by application yml profile. Add the Liquibase dependency, 
+have the changelog.xml path added in the main profile so that both mySql and H2DB can be initialized.
+
+Access :
+
+http://localhost:9999/h2-console
+![](assets/h2.png)
+
+### Scenario 3 :
+Implement a DB change by having a new column, gender, added in the profiles table.
