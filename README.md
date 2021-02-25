@@ -1,5 +1,8 @@
 # liquibase-with-sprintBoot
 
+## Swagger UI
+http://localhost:9999/swagger-ui/index.html
+
 Begin with project with the following dependencies
 ![image](assets/dependencies.png)
 
