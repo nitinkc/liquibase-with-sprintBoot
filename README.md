@@ -1,9 +1,14 @@
 # liquibase-with-sprintBoot
 
-Begin with the following dependencies
+Begin with project with the following dependencies
+![image](assets/dependencies.png)
 
+### Scenario 1 : 
+Create tables using change log and insert sample data. Tables should have Primary keys and have foreign key relationship  
 
-Create the following schema so that the initial setup so that create table adn insert statements with them can be done
+Create the Tables (via Liquibase Change Set) after creating the following schema from SQL Prompt
+
+##### __Branch : v1-create-table-inserting-data__
 
 ```sql
 CREATE SCHEMA `liquibaseLearn`;
