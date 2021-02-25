@@ -36,3 +36,5 @@ http://localhost:9999/h2-console
 
 ### Scenario 3 :
 Implement a DB change by having a new column, gender, added in the profiles table.
+
+Added Sample Data  and include older files to be executed.

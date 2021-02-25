@@ -1,10 +1,10 @@
 spring:
   profiles:
-    #active: mysql
-    active: h2
+    active: mysql
+    #active: h2
     #include: hibernate,logging
   liquibase:
-    change-log: classpath:db-changelog.xml
+    change-log: classpath:db-with-sample-data.xml
 server:
   port: 9999
 
