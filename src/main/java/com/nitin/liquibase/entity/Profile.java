@@ -28,4 +28,7 @@ public class Profile {
 
     @Column(name = "PRO_IMAGE_URL")
     private String imageUrl;
+
+    @Column(name = "Gender")
+    private Character gender;
 }

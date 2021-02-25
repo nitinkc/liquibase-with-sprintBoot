@@ -12,4 +12,5 @@ public class NewProfileRequest {
     private String house;
     private String description;
     private String imageUrl;
+    private Character gender;
 }
