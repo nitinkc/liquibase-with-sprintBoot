@@ -1,0 +1,5 @@
+# CALLING H2 DB FROM EXTERNAL PROPERTIES FILE
+## ONLY application-datasource-h2.properties FILE NAME IS WORKING
+spring:
+  profiles:
+  include: datasource-h2,hibernate,logging

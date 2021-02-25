@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: mysql
+    #include: hibernate,logging
+server:
+  port: 9999
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
