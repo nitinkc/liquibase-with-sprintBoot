@@ -23,4 +23,6 @@ GRANT SELECT, INSERT, UPDATE, DELETE, EXECUTE, SHOW VIEW, CREATE, ALTER, REFEREN
 FLUSH PRIVILEGES;
 ```
 
+### Scenario 2 : 
 
+Implement REST API, and have a new column, gender, added in the profiles table.

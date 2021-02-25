@@ -8,8 +8,8 @@ import lombok.Setter;
 public class NewProfileRequest {
     private Long studentId;
 
-    private String name;
     private String wand;
     private String house;
     private String description;
+    private String imageUrl;
 }
