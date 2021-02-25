@@ -69,4 +69,10 @@
                                  referencedTableName="STUDENT" referencedColumnNames="STUDENT_ID" />
     </changeSet>
 
+    <changeSet id="Add PRO_GENDER column" author="nitin">
+        <addColumn tableName="PROFILES">
+            <column name="GENDER" type="char(1)" />
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>

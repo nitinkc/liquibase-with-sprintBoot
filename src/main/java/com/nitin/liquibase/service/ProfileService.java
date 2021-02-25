@@ -24,7 +24,9 @@ public class ProfileService {
         profile.setWand(newProfileRequest.getWand());
         profile.setHouse(newProfileRequest.getHouse());
         profile.setDescription(newProfileRequest.getDescription());
-        profile.setImageUrl("/img/sample.jpg");
+        profile.setImageUrl(newProfileRequest.getImageUrl());
+        profile.setGender(newProfileRequest.getGender());
+
 
         if (newProfileRequest.getStudentId() != null) {
             profile.setStudent(studentRepository.findById(newProfileRequest.getStudentId())
